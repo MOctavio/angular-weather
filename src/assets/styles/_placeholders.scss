@@ -1,0 +1,15 @@
+%font {
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    color: gainsboro;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: $font-m;
+    font-smoothing: antialiased;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+%center {
+    margin: 0 auto;
+    text-align: center;
+}

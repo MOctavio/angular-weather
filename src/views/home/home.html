@@ -1,0 +1,11 @@
+<section ng-controller="HomeController as vm">
+    <div class="main-container">
+        <p class="title">Forecast weather in your city.</p>
+        <form>
+            <input type="text" name="city" placeholder="City name..." required="required" ng-model="vm.city" />
+            <button type="submit" class="btn btn-primary btn-block btn-large" ng-click="vm.getWeatherForecast()">Search</button>
+        </form>
+        <weather-list ng-if="vm.forecast" forecast="vm.forecast"></weather-list>
+    </div>
+</section>
+<page-footer></page-footer>

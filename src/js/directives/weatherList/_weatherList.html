@@ -1,0 +1,9 @@
+<section class="weather-list">
+    <article ng-repeat="data in forecast.forecast">
+        <img ng-src="{{data.iconURL}}" alt="{{data.weather}}" />
+        <h4>{{data.date}}</h4>
+        <p>{{data.weather}}</p>
+        <p>Humidity: {{data.humidity}}</p>
+        <p>Temperature: {{data.temp.min}} to {{data.temp.max}}</p>
+    </article>
+</section>
