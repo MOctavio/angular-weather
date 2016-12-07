@@ -2,6 +2,8 @@
 
 Weather app in AngularJS making use of [OpenWeatherMap API](http://openweathermap.org/).
 
+![Angular-Weather App](https://github.com/MOctavio/angular-weather/blob/master/src/assets/img/preview.png?raw=true "Angular-Weather App")
+
 Highlights:
 - [Decorators in AngularJS](https://docs.angularjs.org/guide/decorators)
 - [$resource Provider](https://docs.angularjs.org/api/ngResource/service/$resource)
