@@ -3,7 +3,7 @@ angular.module('weatherApp.services')
         //Please use your API KEY http://openweathermap.org/appid
         const APIKEY = '46611953e2cbb32a28715f841b70d720';
         const weatherAPI = $resource(`http://api.openweathermap.org/data/2.5/forecast/daily?APPID=${APIKEY}`, {
-            callback: "JSON_CALLBACK"
+            jsonCallback: "JSON_API_CALLBACK" // https://docs.angularjs.org/api/ng/service/$http
         }, {
             get: {
                 method: "JSONP"

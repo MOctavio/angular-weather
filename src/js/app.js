@@ -1,5 +1,8 @@
 angular.module('weatherApp', ['ui.router', 'ngResource', 'ngTouch', 'weatherApp.services', 'weatherApp.controllers', 'weatherApp.directives', 'weatherApp.decorators'])
-    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$sceDelegateProvider', function($stateProvider, $urlRouterProvider, $sceDelegateProvider) {
+
+        $sceDelegateProvider.resourceUrlWhitelist(['self', new RegExp('^http:\/\/api\.openweathermap\.org\/?.+$')]);
+
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {
