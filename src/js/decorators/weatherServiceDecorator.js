@@ -1,13 +1,12 @@
 angular.module('weatherApp.decorators')
-    .decorator('weatherService', ['$delegate', '$q', function($delegate, $q) {
+    .decorator('weatherService', ['$delegate', function($delegate) {
 
         const kelvinToCelsius = (kelvin => Math.round(kelvin - 273.15));
         const convertToDate = ((dt) => new Date(dt * 1000).toUTCString().substring(0, 15));
         const pascalCase = (s => s.replace(/(\w)(\w*)/g, (g0,g1,g2) => g1.toUpperCase() + g2.toLowerCase()));
 
         const getWeatherForecast = function(city, day) {
-            const defer = $q.defer()
-            $delegate
+            return $delegate
                 .getWeatherForecast(city, day).$promise
                 .then(response => {
                     const { list, city } = response;
@@ -32,9 +31,8 @@ angular.module('weatherApp.decorators')
                         };
                         data.forecast.push(_forecast);
                     }
-                    return defer.resolve(data);
+                    return data;
                 });
-            return defer.promise;
         };
 
         return {
