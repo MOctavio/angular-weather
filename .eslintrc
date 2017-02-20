@@ -1,10 +1,23 @@
 {
   "extends": [
     "eslint:recommended",
-    "angular"
+    "angular",
+    "google",
   ],
   "rules": {
-    "angular/di": 0
+    "angular/di": 0,
+    "arrow-parens": [0, "as-needed"],
+    "linebreak-style": ["error", "windows"],
+    "max-len": ["warn", 100],
+    "no-var": "off",
+    "comma-dangle": "warn",
+    "quotes": ["warn", "single"],
+    "require-jsdoc": "off",
+    "space-before-function-paren": ["off", "always"],
+    "no-invalid-this": "warn",
+    "one-var":"off",
+    "guard-for-in": "warn",
+    "spaced-comment": "warn",
   },
   "parser": "babel-eslint",
   "parserOptions": {
