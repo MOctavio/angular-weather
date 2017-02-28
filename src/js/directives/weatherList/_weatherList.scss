@@ -21,7 +21,7 @@
     article {
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
-        background-color: rgba(207, 150, 189, 0.2);
+        background-color: rgba(255, 255, 255, 0.2);
         border-radius: 4px;
         margin-bottom: 15px;
         margin-right: 5px;
@@ -41,6 +41,5 @@
 
     p {
         @extend %font;
-        font-size: $font-m;
     }
 }
